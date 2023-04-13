@@ -1,4 +1,54 @@
-.App {
+:root {
+  --primary: #495e57;
+  --primary2: #f3ce14;
+  --secondary: #ee9972;
+  --secondary2: #fbdabb;
+  --highlight: #edefee;
+  --highlight2: #333333;
+}
+h3 {
+  color: var(--primary);
+}
+.header {
+  width: 100vw;
+  height: 7rem;
+  background-color: var(--highlight); /* */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header ul > li {
+  display: inline-block;
+  padding: 0 1rem;
+}
+.header a {
+  font-weight: 500;
+}
+.footer {
+  padding: 6rem;
+  width: 100vw;
+  height: 26rem;
+  background-color: var(--highlight); /* */
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 5rem;
+}
+
+.footer-block > h3:first-child {
+  display: inline-block;
+  height: 4rem;
+}
+.footer a {
+  color: var(--highlight2);
+}
+.footer li,
+.footer p {
+  padding: 0.2rem 0;
+  color: var(--highlight2);
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +85,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
