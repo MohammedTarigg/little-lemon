@@ -1,14 +1,13 @@
 import React from "react";
-import Header from "./Header";
-import Footer from "./Footer";
 import "./App.css";
+import HomePage from "./components/HomePage";
+import {Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Footer />
-    </>
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+      </Routes>
   );
 }
 
