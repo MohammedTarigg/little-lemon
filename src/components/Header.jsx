@@ -1,16 +1,21 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../assets/Logo.png";
 import hamburger from "../assets/hamburger.png";
 import basket from "../assets/basket.png";
 
 function Header() {
   return (
-    <>
       <header className="header">
-        <img alt="hamburger icon" src={hamburger} className="phone-icon" />
-        <img alt="logo" src={logo} />
-        <img alt="hamburger icon" src={basket} className="phone-icon" />
+        <Link to="/">
+          <img alt="hamburger icon" src={hamburger} className="phone-icon" />
+        </Link>
+        <Link to="/">
+          <img alt="logo" src={logo} />
+        </Link>
+        <Link to="/">
+          <img alt="hamburger icon" src={basket} className="phone-icon" />
+        </Link>
         <nav className="desktop-navigation">
           <ul>
             <li>
@@ -23,7 +28,7 @@ function Header() {
               <Link to="/">Menu</Link>
             </li>
             <li>
-              <Link to="/">Reservations</Link>
+              <Link to="/Booking">Reservations</Link>
             </li>
             <li>
               <Link to="/">Order Online</Link>
@@ -34,7 +39,6 @@ function Header() {
           </ul>
         </nav>
       </header>
-    </>
   );
 }
 

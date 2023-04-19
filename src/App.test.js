@@ -1,8 +1,9 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render,screen,fireEvent } from '@testing-library/react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import BookingPage from './Pages/BookingPage';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('Form testing',() => {
+  render(<Router><BookingPage /></Router>);
+  const reserveButton = screen.getByLabelText(/First Name/i);
+  expect(reserveButton).toBeInTheDocument();
 });

@@ -240,6 +240,40 @@ aside > img {
 .footer-block {
   width: 18vw;
 }
+/*//////////////////////////////////////////////////////////////*/
+.form-cont{
+  padding: 2rem;
+  background-color: var(--highlight);
+}
+label{
+  display: block;
+  font-size: 20px;
+  padding-top: 1rem;
+}
+input[type="text"],input[type="number"],input[type="date"],select{
+  padding: 0.5rem;
+  width: 100%;
+  line-height: 1.5rem;
+  border: none;
+  border-bottom: 1px solid var(--primary2);
+  border-radius: 16px;
+}
+.form-cont input[type="submit"]{
+  margin:2rem 0rem 2rem 0;
+  width: 100%;
+}
+.form-cont input[type="submit"]:hover{
+  border: 1px solid transparent;
+}
+.confirmed-main{
+  margin: 20% 15% 0 15%;
+  background-color: var(--primary);
+  padding: 1rem;
+  color: #edefee;
+}
+.confirmed-main .title{
+  font-size: 2rem;
+}
 @media screen and (min-width: 900px) {
   .header {
     justify-content: center;
@@ -289,16 +323,25 @@ aside > img {
   .footer-block > h3:first-child {
     width: auto;
   }
+  .form-cont{
+    padding: 5rem 0rem 0rem 10rem;
+  }
+  input[type="text"],input[type="number"],input[type="date"],select{
+    width: auto;
+  }
+  .form-cont input[type="submit"]{
+    width: 25vw;
+  }
 }
 .button-primary {
   background-color: var(--primary2);
   border-radius: 20px;
-  border-style: none;
+  border: 1px solid var(--primary2);
   font-weight: 600;
   padding: 10px 28px;
   font-size: 1.2rem;
 }
 .button-primary:hover {
-  background-color: var(--highlight);
-  /* color: var(--white); */
+  border: 1px solid var(--primary2);
+  background-color: var(--primary);
 }
