@@ -1,16 +1,16 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import BookingForm from "../components/reservation/BookingForm";
-import React, { useState, useReducer } from "react"
-import { fetchAPI, submitAPI } from "../api"
+import React,{ useState,useReducer } from "react"
+import { fetchAPI,submitAPI } from "../api"
 import { useNavigate } from "react-router-dom";
 
 function BookingPage() {
   const [date] = useState(new Date())
- 
+
   function initializeTimes(date) {
     return fetchAPI(date)
-    }
+  }
 
   function updateTimes(date) {
     const dateObj = new Date(date)
@@ -26,14 +26,14 @@ function BookingPage() {
       navigate("/confirmed");
     }
   }
-  
-  function reducer(state, action) {
+
+  function reducer(state,action) {
     let newState;
     switch (action.type) {
       case 'UPDATE_TIMES':
-      const newDate = new Date(action.payload);
-      newState = updateTimes(newDate)
-      break;
+        const newDate = new Date(action.payload);
+        newState = updateTimes(newDate)
+        break;
 
       default:
         throw new Error()
@@ -41,7 +41,7 @@ function BookingPage() {
     return newState
   }
 
-  const [availableTimes, dispatch] = useReducer(reducer, initializeTimes(date))
+  const [availableTimes,dispatch] = useReducer(reducer,initializeTimes(date));
   return (
     <>
       <Header />

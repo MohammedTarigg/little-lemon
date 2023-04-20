@@ -7,6 +7,7 @@
   --highlight: #edefee;
   --highlight2: #333333;
   --black: #212121;
+  --red: #ee3a3a;
 }
 .header {
   padding: 0 2rem;
@@ -266,7 +267,10 @@ input[type="text"],input[type="number"],input[type="date"],select{
   border: 1px solid transparent;
 }
 .confirmed-main{
-  margin: 20% 15% 0 15%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: var(--primary);
   padding: 1rem;
   color: #edefee;
@@ -274,6 +278,13 @@ input[type="text"],input[type="number"],input[type="date"],select{
 .confirmed-main .title{
   font-size: 2rem;
 }
+.form-error{
+ color: var(--red);
+ font-weight: 600;
+}
+.form-error::after{
+  content: "*";
+ }
 @media screen and (min-width: 900px) {
   .header {
     justify-content: center;
@@ -344,4 +355,7 @@ input[type="text"],input[type="number"],input[type="date"],select{
 .button-primary:hover {
   border: 1px solid var(--primary2);
   background-color: var(--primary);
+}
+.button-primary:disabled{
+  background-color: var(--highlight);
 }
