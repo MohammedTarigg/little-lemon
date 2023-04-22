@@ -31,7 +31,7 @@ function BookingPage() {
     let newState;
     switch (action.type) {
       case 'UPDATE_TIMES':
-        const newDate = new Date(action.payload);
+        let newDate = new Date(action.payload);
         newState = updateTimes(newDate)
         break;
 
