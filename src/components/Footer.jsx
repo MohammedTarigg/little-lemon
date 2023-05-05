@@ -9,8 +9,8 @@ function Footer() {
         <img alt="bottom logo" src={footerLogo} />
         <div className="footer-block">
           <h2>
-            Doormat
-            <br /> Navigation
+            Helpful
+            <br /> Links
           </h2>
           <nav>
             <ul>
@@ -37,15 +37,21 @@ function Footer() {
         </div>
         <div className="footer-block">
           <h2>Contact</h2>
-          <p>address</p>
-          <p>phone number</p>
-          <p>email</p>
+          <p>Doha,Qatar</p>
+          <p>(974)55428912</p>
+          <p>mohamed.tarigsd@gmail.com</p>
         </div>
         <div className="footer-block">
           <h2>Social Media links</h2>
-          <p>address</p>
-          <p>phone number</p>
-          <p>email</p>
+          <a href="https://www.linkedin.com/in/mohamed-tarigg/" target="_blank">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <a href="https://wa.me/97455428912" target="_blank">
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com/MohammedTarigg" target="_blank">
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </a>
         </div>
       </footer>
     </>

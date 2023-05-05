@@ -9,6 +9,10 @@
   --black: #212121;
   --red: #ee3a3a;
 }
+button:hover {
+  cursor: pointer;
+}
+
 .header {
   padding: 0 2rem;
   width: 100%;
@@ -31,13 +35,13 @@
   padding: 8px;
   border-radius: 8px;
 }
-.active-link{
+.active-link {
   background-color: var(--primary);
   color: var(--white);
 }
 .hero {
-  height: 65vh;
   background-color: var(--primary);
+  height: 65vh;
   position: relative;
   display: flex;
   justify-content: space-around;
@@ -46,6 +50,7 @@
 }
 .image {
   max-width: 100%;
+  max-height: 100%;
 }
 .hero div:first-child {
   width: 50vw;
@@ -56,11 +61,12 @@
 }
 .hero span {
   font-size: 3rem;
-  color: var(--highlight);
+  color: var(--white);
 }
 .hero p {
   margin-top: 1.5rem;
   font-size: 1.7rem;
+  color: var(--white);
 }
 .hero aside {
   margin-top: 5rem;
@@ -73,9 +79,23 @@ aside > img {
   position: absolute;
   bottom: 3rem;
 }
+.hero-image {
+  animation: rotation 90s linear infinite;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .specials {
   min-height: 116vh;
   padding: 2rem 1rem;
+}
+.specials article:hover {
+  transform: scale(1.1);
 }
 .specials h3 {
   color: var(--black);
@@ -87,6 +107,7 @@ aside > img {
   font-size: 3rem;
 }
 .specials h4 {
+  cursor: pointer;
   color: var(--black);
   font-size: 1.2rem;
   font-weight: 600;
@@ -99,7 +120,7 @@ aside > img {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 .specials div:nth-child(2) {
   justify-content: center;
@@ -119,9 +140,10 @@ aside > img {
   margin-bottom: 20px;
 }
 .specials article {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   position: relative;
   max-width: 300px;
-  min-height: 64vh;
+  min-height: 70vh;
   background-color: var(--highlight);
   border-top-right-radius: 16px;
   border-top-left-radius: 16px;
@@ -134,7 +156,6 @@ aside > img {
 .testimonials {
   min-height: 116vh;
   padding: 8rem 1rem;
-  background-color: var(--highlight);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -146,24 +167,32 @@ aside > img {
   flex-wrap: wrap;
   justify-content: center;
 }
+.testimonials h4 {
+  font-size: 1.4rem;
+}
 .testimonials h2 {
+  color: var(--primary2);
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 7rem;
 }
 .testimonials article {
-  width: 12.5rem;
-  max-height: 15rem;
+  width: 15rem;
+  max-height: 17rem;
   background-color: var(--white);
   display: grid;
   grid-template-areas:
     "R R R"
     "I N ."
-    "RT RT .";
+    "RT RT RT";
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
-  padding: 2rem 1rem;
+  gap: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.checked {
+  color: var(--primary2);
 }
 .testimonials h3 {
   grid-area: R;
@@ -176,6 +205,46 @@ aside > img {
 }
 .testimonials p {
   grid-area: RT;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.testimonials article:nth-child(even):focus {
+  animation: from-right-to-center 0.5s linear forwards;
+}
+.testimonials article:nth-child(odd):focus {
+  animation: from-left-to-center 0.5s linear forwards;
+}
+.testimonials article:focus p {
+  font-size: 0.7rem;
+  display: block;
+}
+@keyframes from-right-to-center {
+  0% {
+  }
+  50% {
+    transform: translate(-30%, 10%);
+  }
+  100% {
+    /* position: absolute;
+    left: 50;
+    top: 50; */
+    transform: scale(1.7) translate(-30%, 10%);
+  }
+}
+@keyframes from-left-to-center {
+  0% {
+  }
+  50% {
+    transform: translate(30%, 10%);
+  }
+  100% {
+    /* position: absolute;
+    left: 50;
+    top: 50; */
+    transform: scale(1.7) translate(30%, 10%);
+  }
 }
 .overview {
   min-height: 93vh;
@@ -199,9 +268,9 @@ aside > img {
   font-size: 1.5rem;
   font-weight: 600;
 }
-.overview div:first-child{
- max-width: 70vw;
- margin-bottom: 5rem;
+.overview div:first-child {
+  max-width: 70vw;
+  margin-bottom: 5rem;
 }
 .overview img {
   width: 35vw;
@@ -229,6 +298,12 @@ aside > img {
   flex-direction: column;
   gap: 1rem;
 }
+.footer h2 {
+  font-weight: 600;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
 .footer-block > h3:first-child {
   display: inline-block;
   height: 4rem;
@@ -248,17 +323,27 @@ aside > img {
 .footer-block {
   width: 18vw;
 }
+.footer-block .fa {
+  font-size: 30px;
+  margin-right: 2rem;
+}
+.footer-block .fa:hover {
+  color: var(--primary2);
+}
 /*//////////////////////////////////////////////////////////////*/
-.form-cont{
+.form-cont {
   padding: 2rem;
   background-color: var(--highlight);
 }
-label{
+label {
   display: block;
   font-size: 20px;
   padding-top: 1rem;
 }
-input[type="text"],input[type="number"],input[type="date"],select{
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
   padding: 0.5rem;
   width: 100%;
   line-height: 1.5rem;
@@ -266,14 +351,14 @@ input[type="text"],input[type="number"],input[type="date"],select{
   border-bottom: 1px solid var(--primary2);
   border-radius: 16px;
 }
-.form-cont input[type="submit"]{
-  margin:2rem 0rem 2rem 0;
+.form-cont input[type="submit"] {
+  margin: 2rem 0rem 2rem 0;
   width: 100%;
 }
-.form-cont input[type="submit"]:hover{
+.form-cont input[type="submit"]:hover {
   border: 1px solid transparent;
 }
-.confirmed-main{
+.confirmed-main {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -282,16 +367,16 @@ input[type="text"],input[type="number"],input[type="date"],select{
   padding: 1rem;
   color: #edefee;
 }
-.confirmed-main .title{
+.confirmed-main .title {
   font-size: 2rem;
 }
-.form-error{
- color: var(--red);
- font-weight: 600;
+.form-error {
+  color: var(--red);
+  font-weight: 600;
 }
-.form-error::after{
+.form-error::after {
   content: "*";
- }
+}
 @media screen and (min-width: 900px) {
   .header {
     justify-content: center;
@@ -302,9 +387,6 @@ input[type="text"],input[type="number"],input[type="date"],select{
   .desktop-navigation {
     display: block;
   }
-  .hero {
-    padding: 5vh 10vw 3vh 15vw;
-  }
   .hero aside {
     margin-top: 0;
     width: 20vw;
@@ -313,10 +395,18 @@ input[type="text"],input[type="number"],input[type="date"],select{
     font-size: 2rem;
   }
   .hero div:first-child {
-    width: 30vw;
+    min-width: 30vw;
   }
   .specials {
     padding: 10rem 22rem;
+  }
+  .testimonials article:nth-child(1):focus,
+  .testimonials article:nth-child(2):focus {
+    animation: from-left-to-center 0.5s linear forwards;
+  }
+  .testimonials article:nth-child(3):focus,
+  .testimonials article:nth-child(4):focus {
+    animation: from-right-to-center 0.5s linear forwards;
   }
   .overview {
     padding: 7rem 9rem;
@@ -325,9 +415,9 @@ input[type="text"],input[type="number"],input[type="date"],select{
     width: 15vw;
     height: 50vh;
   }
-  .overview div:first-child{
+  .overview div:first-child {
     max-width: 40vw;
-   }
+  }
   .overview img:nth-child(1) {
     transform: translate(5rem, -5rem);
   }
@@ -341,13 +431,16 @@ input[type="text"],input[type="number"],input[type="date"],select{
   .footer-block > h3:first-child {
     width: auto;
   }
-  .form-cont{
+  .form-cont {
     padding: 5rem 0rem 0rem 10rem;
   }
-  input[type="text"],input[type="number"],input[type="date"],select{
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  select {
     width: auto;
   }
-  .form-cont input[type="submit"]{
+  .form-cont input[type="submit"] {
     width: 25vw;
   }
 }
@@ -360,20 +453,22 @@ input[type="text"],input[type="number"],input[type="date"],select{
   font-size: 1.2rem;
 }
 .button-primary:hover {
-  border: 1px solid var(--primary2);
+  border: 1px solid var(--primary);
   background-color: var(--primary);
 }
-.button-primary:disabled{
+.button-primary:disabled {
   background-color: var(--highlight);
 }
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
+  appearance: none;
   -webkit-appearance: none;
   margin: 0;
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
+  appearance: textfield;
   -moz-appearance: textfield;
 }

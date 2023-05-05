@@ -1,27 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import restaurantFood from "../../assets/restauranfood.png";
+import heroImage from "../../assets/hero-image.png";
 
 export default function Hero() {
-  const heroText = {
-    title: `little lemon`,
-    subtitle: `chicago`,
-    describtion: `We are family owned mediterranean restaurant,
-        focused on traditional recipes served with a modern twist.`,
-  };
   return (
     <section className="hero">
       <div>
         <h1>
-          {heroText.title}
+          little lemon
           <br />
-          <span>{heroText.subtitle}</span>
+          <span>chicago</span>
         </h1>
-        <p>{heroText.describtion}</p>
-        <Link to="/Booking" className="button-primary">Reserve a table</Link>
+        <p>
+          We are family owned mediterranean <br />
+          restaurant, focused on traditional recipes <br />
+          served with a modern twist.
+        </p>
+        <Link to="/Booking" className="button-primary">
+          Reserve a table
+        </Link>
       </div>
       <aside>
-        <img alt="dish" src={restaurantFood} className="image" />
+        <img alt="dish" src={heroImage} className="image hero-image" />
       </aside>
     </section>
   );
