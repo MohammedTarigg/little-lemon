@@ -18,9 +18,6 @@ function Footer() {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/">About</Link>
-              </li>
-              <li>
                 <Link to="/">Menu</Link>
               </li>
               <li>
@@ -31,6 +28,9 @@ function Footer() {
               </li>
               <li>
                 <Link to="/">Login</Link>
+              </li>
+              <li>
+                <Link to="/">About</Link>
               </li>
             </ul>
           </nav>
@@ -43,14 +43,20 @@ function Footer() {
         </div>
         <div className="footer-block">
           <h2>Social Media links</h2>
-          <a href="https://www.linkedin.com/in/mohamed-tarigg/" target="_blank">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
+          <a
+            href="https://www.linkedin.com/in/mohamed-tarigg/"
+            rel="noreferrer"
+            target="_blank">
+            <i className="fa fa-linkedin" aria-hidden="true"></i>
           </a>
-          <a href="https://wa.me/97455428912" target="_blank">
-            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+          <a href="https://wa.me/97455428912" rel="noreferrer" target="_blank">
+            <i className="fa fa-whatsapp" aria-hidden="true"></i>
           </a>
-          <a href="https://github.com/MohammedTarigg" target="_blank">
-            <i class="fa fa-github" aria-hidden="true"></i>
+          <a
+            href="https://github.com/MohammedTarigg"
+            rel="noreferrer"
+            target="_blank">
+            <i className="fa fa-github" aria-hidden="true"></i>
           </a>
         </div>
       </footer>
