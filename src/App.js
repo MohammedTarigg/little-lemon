@@ -7,6 +7,7 @@ import MenuPage from "./Pages/MenuPage";
 import AboutPage from "./Pages/AboutPage";
 
 function App() {
+
   return (
     <Router>
       <Routes>

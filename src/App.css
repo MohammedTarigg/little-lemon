@@ -68,30 +68,31 @@ input[type="submit"] {
 }
 .phone-navigation {
   position: absolute;
-  top: 0%;
+  top: 0;
   left: -100%;
-  height: 5088px;
+  height: 100vh;
   width: 40%;
   background-color: var(--highlight);
   z-index: 2;
   transition: all 0.3s linear;
+}
+.phone-navigation div {
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
 }
 .phone-navigation a {
   font-size: 24px;
-}
-.phone-navigation ul {
-  display: flex;
-  flex-direction: column;
-  margin-top: 3rem;
-  gap: 2rem;
+  padding: 1rem;
 }
 .desktop-navigation {
   display: none;
 }
-.header ul > li {
+.header .desktop-navigation a {
   display: inline-block;
-  padding: 0 1rem;
+  padding: 1rem;
 }
 .header a {
   text-align: center;
@@ -104,8 +105,11 @@ input[type="submit"] {
   scale: 1;
   filter: grayscale(100%);
 }
-.active-link {
+.desktop-navigation .active-link {
   color: var(--primary2);
+}
+.phone-navigation .active-link {
+  background-color: var(--primary2);
 }
 .active-menu {
   left: 0;
@@ -661,6 +665,53 @@ select {
 .menu-item i::after {
   content: "$";
 }
+.about {
+  padding: 3rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+.about > h1 {
+  font-size: 6rem;
+  color: var(--primary);
+  text-align: center;
+}
+.about > p {
+  font-size: 1.2rem;
+  max-width: 30rem;
+  text-align: center;
+}
+.morph-circle {
+  height: 350px;
+  width: 350px;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  /* background-color: #212121; */
+  animation: morph 8s ease-in-out infinite;
+}
+.about-img {
+  background-image: url(./assets/restauranfood.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  border: 10px solid var(--primary2);
+}
+@keyframes morph {
+  0% {
+    background-position: top;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    background-position: bottom;
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    background-position: top;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
 @media screen and (min-width: 900px) {
   .header {
     padding: 25px 40px 25px 50px;

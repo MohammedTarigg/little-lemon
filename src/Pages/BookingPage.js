@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import BookingForm from "../components/reservation/BookingForm";
-import React,{ useState,useReducer } from "react"
+import React,{ useState,useReducer,useEffect } from "react"
 import { fetchAPI,submitAPI } from "../api"
 // import { useNavigate } from "react-router-dom";
 
@@ -45,6 +45,10 @@ function BookingPage() {
   }
 
   const [availableTimes,dispatch] = useReducer(reducer,initializeTimes(date));
+  useEffect(() => {
+    window.scrollTo(0,0)
+  },[])
+
   return (
     <>
       <Header />

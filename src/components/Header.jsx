@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-// import logo from "../assets/Logo.png";
 import basket from "../assets/headerNfooter/basket.png";
 
 function Header() {
@@ -59,43 +58,33 @@ function Header() {
             setActivemenu(!activeMenu);
           }}></div>
         <nav className={mode}>
-          <ul>
-            <li>
-              <NavLink
-                className={({ isActive }) => (isActive ? "active-link" : "")}
-                to="/">
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className={({ isActive }) => (isActive ? "active-link" : "")}
-                to="/menu">
-                Menu
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className={({ isActive }) => (isActive ? "active-link" : "")}
-                to="/booking">
-                Reservations
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className={({ isActive }) => (isActive ? "active-link" : "")}
-                to="/about">
-                About
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                // className={({ isActive }) => (isActive ? "active-link" : "")}
-                to="/">
-                Login
-              </NavLink>
-            </li>
-          </ul>
+          <div>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              to="/">
+              Home
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              to="/menu">
+              Menu
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              to="/booking">
+              Reservations
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              to="/about">
+              About
+            </NavLink>
+            <NavLink
+              // className={({ isActive }) => (isActive ? "active-link" : "")}
+              to="/">
+              Login
+            </NavLink>
+          </div>
         </nav>
         <NavLink to="/">
           <img alt="basket icon" src={basket} className="cart" />

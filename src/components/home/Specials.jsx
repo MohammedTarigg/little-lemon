@@ -1,8 +1,9 @@
 import React from "react";
-import delivery from "../../assets/delivery.png";
+// import delivery from "../../assets/delivery.png";
 import greekSaladImage from "../../assets/menu/salads/greeksalad.png";
 import bruchettaImage from "../../assets/menu/mains/bruchetta.png";
 import lemonDessertImage from "../../assets/menu/desserts/lemondessert.png";
+import { NavLink } from "react-router-dom";
 
 function SpecialsCard({ image, name, price, describtion }) {
   return (
@@ -17,7 +18,7 @@ function SpecialsCard({ image, name, price, describtion }) {
         </div>
         <p>{describtion}</p>
         <h4>
-          Order for Delivery <img alt="delivery icon" src={delivery} />
+          {/* Order for Delivery <img alt="delivery icon" src={delivery} /> */}
         </h4>
       </div>
     </article>
@@ -52,7 +53,9 @@ export default function Specials() {
     <section className="specials">
       <div>
         <h1 style={{ display: "inline-block" }}>This week's Specials!</h1>
-        <button className="button-primary">Order Menu</button>
+        <NavLink className="button-primary" to="/menu">
+          Order Menu
+        </NavLink>
       </div>
       <div>
         <SpecialsCard
