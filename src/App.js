@@ -1,17 +1,19 @@
 import React from "react";
+import { BrowserRouter as Router,Route,Routes } from "react-router-dom";
 import "./App.css";
 import HomePage from "./Pages/HomePage";
-import { BrowserRouter as Router,Route,Routes } from "react-router-dom";
 import BookingPage from "./Pages/BookingPage";
-import ConfirmedBooking from "./Pages/ConfirmedBooking";
+import MenuPage from "./Pages/MenuPage";
+import AboutPage from "./Pages/AboutPage";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route exact path="/" element={<HomePage />} />
-        <Route path="/Booking" element={<BookingPage />} />
-        <Route path="/Confirmed" element={<ConfirmedBooking />} />
+        <Route path="/booking" element={<BookingPage />} />
+        <Route path="/menu" element={<MenuPage />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
     </Router>
   );

@@ -1,8 +1,8 @@
 import React from "react";
 import delivery from "../../assets/delivery.png";
-import greekSaladImage from "../../assets/greeksalad.png";
-import bruchettaImage from "../../assets/bruchetta.png";
-import lemonDessertImage from "../../assets/lemondessert.png";
+import greekSaladImage from "../../assets/menu/salads/greeksalad.png";
+import bruchettaImage from "../../assets/menu/mains/bruchetta.png";
+import lemonDessertImage from "../../assets/menu/desserts/lemondessert.png";
 
 function SpecialsCard({ image, name, price, describtion }) {
   return (

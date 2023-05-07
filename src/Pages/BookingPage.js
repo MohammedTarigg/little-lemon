@@ -3,10 +3,11 @@ import Footer from "../components/Footer";
 import BookingForm from "../components/reservation/BookingForm";
 import React,{ useState,useReducer } from "react"
 import { fetchAPI,submitAPI } from "../api"
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 function BookingPage() {
-  const [date] = useState(new Date())
+  const [date] = useState(new Date());
+  const [confirmed,setConfirmed] = useState(false);
 
   function initializeTimes(date) {
     return fetchAPI(date)
@@ -17,13 +18,15 @@ function BookingPage() {
     return fetchAPI(dateObj)
   }
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   function submitForm(formData) {
     const isSubmitted = submitAPI(formData);
 
     if (isSubmitted) {
-      navigate("/confirmed");
+      // navigate("/confirmed");
+      setConfirmed(true);
+      console.log("submitted");
     }
   }
 
@@ -45,7 +48,7 @@ function BookingPage() {
   return (
     <>
       <Header />
-      <BookingForm availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />
+      <BookingForm availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} confirmed={confirmed} setConfirmed={setConfirmed} />
       <Footer />
     </>
   );

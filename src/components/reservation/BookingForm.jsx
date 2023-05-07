@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
-import Dining from "../../assets/Dining.jpg";
+import ConfirmedBooking from "./ConfirmedBooking";
 
-function BookingForm({ availableTimes, dispatch, submitForm }) {
+function BookingForm({
+  availableTimes,
+  dispatch,
+  submitForm,
+  confirmed,
+  setConfirmed,
+}) {
   const initialValues = {
     firstName: { value: "", isTouched: false },
     lastName: { value: "", isTouched: false },
@@ -20,7 +26,6 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
     time: "Time is required",
     occasion: "Occasion is required",
   });
-
   const allTouched = {
     firstName: { ...formData.firstName, isTouched: true },
     lastName: { ...formData.lastName, isTouched: true },
@@ -95,11 +100,10 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
     availableTimes.map((time) => <option key={time}>{time}</option>),
   ];
   return (
-    <main>
-      <div className="form-cont">
-        <div className="form-image">
-          <img src={Dining} alt="Dining " />
-        </div>
+    <>
+      <ConfirmedBooking confirmed={confirmed} setConfirmed={setConfirmed} />
+      <section className="form-cont">
+        <div className="highlight-overlay"></div>
         <form onSubmit={handleSubmit}>
           <div>
             <div className="input-container">
@@ -224,12 +228,12 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
             className="button-primary"
             type="submit"
             value="Reserve"
-            //disabled={Object.keys(formErrors) <1?false:true}
+            // disabled={Object.keys(formErrors) < 1 ? false : true}
             aria-label="submit button"
           />
         </form>
-      </div>
-    </main>
+      </section>
+    </>
   );
 }
 
