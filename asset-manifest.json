@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/little-lemon/static/css/main.6079c429.css",
+    "main.js": "/little-lemon/static/js/main.e3a7c109.js",
+    "static/js/787.a2f6b77c.chunk.js": "/little-lemon/static/js/787.a2f6b77c.chunk.js",
+    "static/media/overview-photo-2.png": "/little-lemon/static/media/overview-photo-2.bf1a51ad795d9c902e16.png",
+    "static/media/restauranfood.png": "/little-lemon/static/media/restauranfood.617a09a951b7e338a962.png",
+    "static/media/greeksalad.png": "/little-lemon/static/media/greeksalad.ac294c4018ae7b44fcdd.png",
+    "static/media/overview-photo-1.png": "/little-lemon/static/media/overview-photo-1.6e501d0d531fda70c0b3.png",
+    "static/media/roasted-potato.jpg": "/little-lemon/static/media/roasted-potato.16c5f9eda58e594740f5.jpg",
+    "static/media/french-fries.jpg": "/little-lemon/static/media/french-fries.285c1e6b7d32d1ee5e3f.jpg",
+    "static/media/cesar-salad.jpg": "/little-lemon/static/media/cesar-salad.f0cafd3bab7f9a11d2ce.jpg",
+    "static/media/chicken-burger.jpg": "/little-lemon/static/media/chicken-burger.943c79547b930c8dfe02.jpg",
+    "static/media/wagyu-beef-burger.jpg": "/little-lemon/static/media/wagyu-beef-burger.79499e4509385933902f.jpg",
+    "static/media/beef-tenderolin.jpg": "/little-lemon/static/media/beef-tenderolin.cd465efb307731f95b07.jpg",
+    "static/media/white-rice.jpg": "/little-lemon/static/media/white-rice.713167733a3a322ca244.jpg",
+    "static/media/delice-au-cafe.jpg": "/little-lemon/static/media/delice-au-cafe.8cfa927941ee3c28af3b.jpg",
+    "static/media/sweet-corn.jpg": "/little-lemon/static/media/sweet-corn.b6fda5b77eb2c91f6c82.jpg",
+    "static/media/crispy-fresh-salmon.jpg": "/little-lemon/static/media/crispy-fresh-salmon.19e4002157a239dbd266.jpg",
+    "static/media/creme-caramel.jpg": "/little-lemon/static/media/creme-caramel.686bd637b6effb6f375d.jpg",
+    "static/media/soup-of-the-day.jpg": "/little-lemon/static/media/soup-of-the-day.d84471557336294be8fe.jpg",
+    "static/media/hero-image.png": "/little-lemon/static/media/hero-image.40389afeb0ee0befb74f.png",
+    "static/media/bruchetta.png": "/little-lemon/static/media/bruchetta.4f6db1dd55178b530a88.png",
+    "static/media/overview-photo-3.jpg": "/little-lemon/static/media/overview-photo-3.a50d38fe84e4302120df.jpg",
+    "static/media/lemondessert.png": "/little-lemon/static/media/lemondessert.0a848e46d9126a9c59e5.png",
+    "static/media/test-3.png": "/little-lemon/static/media/test-3.751a766995b6baa2f01f.png",
+    "static/media/test-4.png": "/little-lemon/static/media/test-4.1fb4d53c899767a3851a.png",
+    "static/media/test-1.png": "/little-lemon/static/media/test-1.b18f5433d74ef4016c1b.png",
+    "static/media/test-2.png": "/little-lemon/static/media/test-2.75d558c26ce95836e90e.png",
+    "index.html": "/little-lemon/index.html",
+    "main.6079c429.css.map": "/little-lemon/static/css/main.6079c429.css.map",
+    "main.e3a7c109.js.map": "/little-lemon/static/js/main.e3a7c109.js.map",
+    "787.a2f6b77c.chunk.js.map": "/little-lemon/static/js/787.a2f6b77c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6079c429.css",
+    "static/js/main.e3a7c109.js"
+  ]
+}
