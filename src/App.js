@@ -12,11 +12,11 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<HomePage />} />
-        <Route path="/booking" element={<BookingPage />} />
-        <Route path="/menu" element={<MenuPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactUs />} />
+        <Route exact path="/little-lemon" element={<HomePage />} />
+        <Route path="/little-lemon/booking" element={<BookingPage />} />
+        <Route path="/little-lemon/menu" element={<MenuPage />} />
+        <Route path="/little-lemon/about" element={<AboutPage />} />
+        <Route path="/little-lemon/contact" element={<ContactUs />} />
       </Routes>
     </Router>
   );

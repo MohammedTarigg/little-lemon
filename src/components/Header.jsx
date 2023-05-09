@@ -66,27 +66,27 @@ function Header() {
           <div>
             <NavLink
               className={({ isActive }) => (isActive ? "active-link" : "")}
-              to="/">
+              to="/little-lemon">
               Home
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? "active-link" : "")}
-              to="/menu">
+              to="/little-lemon/menu">
               Menu
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? "active-link" : "")}
-              to="/booking">
+              to="/little-lemon/booking">
               Reservations
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? "active-link" : "")}
-              to="/about">
+              to="/little-lemon/about">
               About
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? "active-link" : "")}
-              to="/contact">
+              to="/little-lemon/contact">
               Contact us
             </NavLink>
           </div>

@@ -14,19 +14,19 @@ function Footer() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/little-lemon">Home</Link>
             </li>
             <li>
-              <Link to="/menu">Menu</Link>
+              <Link to="/little-lemon/menu">Menu</Link>
             </li>
             <li>
-              <Link to="/booking">Reservations</Link>
+              <Link to="/little-lemon/booking">Reservations</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/little-lemon/about">About</Link>
             </li>
             <li>
-              <Link to="/contact">Contact us</Link>
+              <Link to="/little-lemon/contact">Contact us</Link>
             </li>
           </ul>
         </nav>
