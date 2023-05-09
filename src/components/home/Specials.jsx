@@ -17,9 +17,9 @@ function SpecialsCard({ image, name, price, describtion }) {
           </h3>
         </div>
         <p>{describtion}</p>
-        <h4>
-          {/* Order for Delivery <img alt="delivery icon" src={delivery} /> */}
-        </h4>
+        {/* <h4>
+          Order for Delivery <img alt="delivery icon" src={delivery} />
+        </h4> */}
       </div>
     </article>
   );
@@ -53,7 +53,7 @@ export default function Specials() {
     <section className="specials">
       <div>
         <h1 style={{ display: "inline-block" }}>This week's Specials!</h1>
-        <NavLink className="button-primary" to="/menu">
+        <NavLink className="button-primary" to="/little-lemon/menu">
           Order Menu
         </NavLink>
       </div>

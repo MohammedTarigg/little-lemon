@@ -5,14 +5,12 @@ import Hero from "../components/home/Hero"
 import Testmonials from "../components/home/Testmonials"
 import Specials from "../components/home/Specials"
 import Overview from "../components/home/Overview"
+import ThemeComponent from "../components/ThemeComponent";
 
 function HomePage() {
-  // useEffect(() => {
-  //   window.scrollTo(0,0)
-  // },[])
 
   return (
-    <>
+    <ThemeComponent>
       <Header />
       <main>
         <Hero />
@@ -21,7 +19,7 @@ function HomePage() {
         <Overview />
       </main>
       <Footer />
-    </>
+    </ThemeComponent>
   );
 }
 

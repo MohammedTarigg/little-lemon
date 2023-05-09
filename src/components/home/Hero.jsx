@@ -26,7 +26,7 @@ export default function Hero() {
           We are family owned mediterranean restaurant, focused on traditional
           recipes served with a modern twist.
         </p>
-        <Link to="/Booking" className="button-primary">
+        <Link to="/little-lemon/booking" className="button-primary">
           Reserve a table
         </Link>
       </div>

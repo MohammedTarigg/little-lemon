@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { MaterialUISwitch } from "./MUIswitch";
+import { useTheme } from "./ThemeContext";
+// import { ThemeProvider } from "./ThemeContext";
 // import basket from "../assets/headerNfooter/basket.png";
 
 function Header() {
@@ -33,6 +36,7 @@ function Header() {
     window.scrollTo(0, 0);
   }, []);
 
+  const { theme, toggleTheme } = useTheme();
   return (
     <>
       <header className="header">
@@ -51,7 +55,7 @@ function Header() {
             <rect width="50" x="1" y="70" rx="5" className="bot"></rect>
           </svg>
         </div>
-        <NavLink to="/">
+        <NavLink end to="/">
           <h1>
             little <span>lemon</span> restaurant
           </h1>
@@ -65,35 +69,44 @@ function Header() {
         <nav className={mode}>
           <div>
             <NavLink
+              end
               className={({ isActive }) => (isActive ? "active-link" : "")}
               to="/little-lemon">
               Home
             </NavLink>
             <NavLink
+              end
               className={({ isActive }) => (isActive ? "active-link" : "")}
               to="/little-lemon/menu">
               Menu
             </NavLink>
             <NavLink
+              end
               className={({ isActive }) => (isActive ? "active-link" : "")}
               to="/little-lemon/booking">
               Reservations
             </NavLink>
             <NavLink
+              end
               className={({ isActive }) => (isActive ? "active-link" : "")}
               to="/little-lemon/about">
               About
             </NavLink>
             <NavLink
+              end
               className={({ isActive }) => (isActive ? "active-link" : "")}
               to="/little-lemon/contact">
               Contact us
             </NavLink>
           </div>
         </nav>
-        <NavLink to="/">
-          {/* <img alt="basket icon" src={basket} className="cart" /> */}
-        </NavLink>
+        <MaterialUISwitch
+          checked={theme === "dark"}
+          onChange={() => {
+            toggleTheme();
+          }}
+        />
+        {/* <img alt="basket icon" src={basket} className="cart" /> */}
       </header>
       <div className="header-space"></div>
     </>

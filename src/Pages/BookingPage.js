@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import BookingForm from "../components/reservation/BookingForm";
 import React,{ useState,useReducer } from "react"
 import { fetchAPI,submitAPI } from "../api"
+import ThemeComponent from "../components/ThemeComponent";
 // import { useNavigate } from "react-router-dom";
 
 function BookingPage() {
@@ -47,11 +48,11 @@ function BookingPage() {
   const [availableTimes,dispatch] = useReducer(reducer,initializeTimes(date));
 
   return (
-    <>
+    <ThemeComponent>
       <Header />
       <BookingForm availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} confirmed={confirmed} setConfirmed={setConfirmed} />
       <Footer />
-    </>
+    </ThemeComponent>
   );
 }
 

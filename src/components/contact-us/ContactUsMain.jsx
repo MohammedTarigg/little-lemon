@@ -37,7 +37,7 @@ function ContactUsMain() {
             <label htmlFor="message">Message</label>
             <textarea placeholder=" " id="message"></textarea>
           </div>
-          <button type="submit" className="button-primary">
+          <button type="button" className="button-primary">
             Send
           </button>
         </form>
