@@ -1,7 +1,7 @@
 export default function MenuItem({ dish }) {
   let { image, name, description } = dish;
   return (
-    <article className="menu-item">
+    <article className="menu-item" tabIndex="0">
       <img alt={name + " dish"} src={image} className="image" />
       <div>
         <h2>{name}</h2>

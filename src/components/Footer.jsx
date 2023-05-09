@@ -23,10 +23,10 @@ function Footer() {
               <Link to="/booking">Reservations</Link>
             </li>
             <li>
-              <Link to="/about">Login</Link>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/">About</Link>
+              <Link to="/contact">Contact us</Link>
             </li>
           </ul>
         </nav>
@@ -53,6 +53,30 @@ function Footer() {
           rel="noreferrer"
           target="_blank">
           <i className="fa fa-github" aria-hidden="true"></i>
+        </a>
+        <a
+          href="https://github.com/MohammedTarigg"
+          rel="noreferrer"
+          target="_blank">
+          <i className="fa fa-phone" aria-hidden="true"></i>
+        </a>
+        <a
+          href="https://github.com/MohammedTarigg"
+          rel="noreferrer"
+          target="_blank">
+          <i className="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a
+          href="https://github.com/MohammedTarigg"
+          rel="noreferrer"
+          target="_blank">
+          <i className="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a
+          href="https://github.com/MohammedTarigg"
+          rel="noreferrer"
+          target="_blank">
+          <i className="fa fa-facebook" aria-hidden="true"></i>
         </a>
       </div>
     </footer>

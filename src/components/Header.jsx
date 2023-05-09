@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import basket from "../assets/headerNfooter/basket.png";
+// import basket from "../assets/headerNfooter/basket.png";
 
 function Header() {
   const [windowSize, setWindowSize] = useState({
@@ -28,6 +28,11 @@ function Header() {
   } else {
     document.body.style.overflowY = "scroll";
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <header className="header">
@@ -80,14 +85,14 @@ function Header() {
               About
             </NavLink>
             <NavLink
-              // className={({ isActive }) => (isActive ? "active-link" : "")}
-              to="/">
-              Login
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+              to="/contact">
+              Contact us
             </NavLink>
           </div>
         </nav>
         <NavLink to="/">
-          <img alt="basket icon" src={basket} className="cart" />
+          {/* <img alt="basket icon" src={basket} className="cart" /> */}
         </NavLink>
       </header>
       <div className="header-space"></div>

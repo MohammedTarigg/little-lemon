@@ -5,24 +5,31 @@ import heroImage from "../../assets/home/hero-image.png";
 export default function Hero() {
   return (
     <section className="hero">
-      <div>
+      <aside>
+        <img alt="dish" src={heroImage} className="image hero-image" />
+      </aside>
+      <aside>
+        <img alt="dish" src={heroImage} className="image hero-image" />
+      </aside>
+      <aside>
+        <img alt="dish" src={heroImage} className="image hero-image" />
+      </aside>
+      <aside>
+        <img alt="dish" src={heroImage} className="image hero-image" />
+      </aside>
+      <div className="hero-text">
         <h1>
           little lemon
-          <br />
           <span>chicago</span>
         </h1>
         <p>
-          We are family owned mediterranean <br />
-          restaurant, focused on traditional recipes <br />
-          served with a modern twist.
+          We are family owned mediterranean restaurant, focused on traditional
+          recipes served with a modern twist.
         </p>
         <Link to="/Booking" className="button-primary">
           Reserve a table
         </Link>
       </div>
-      <aside>
-        <img alt="dish" src={heroImage} className="image hero-image" />
-      </aside>
     </section>
   );
 }

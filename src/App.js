@@ -5,6 +5,7 @@ import HomePage from "./Pages/HomePage";
 import BookingPage from "./Pages/BookingPage";
 import MenuPage from "./Pages/MenuPage";
 import AboutPage from "./Pages/AboutPage";
+import ContactUs from "./Pages/ContactUs";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Route path="/booking" element={<BookingPage />} />
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </Router>
   );

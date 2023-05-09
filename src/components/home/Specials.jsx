@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 
 function SpecialsCard({ image, name, price, describtion }) {
   return (
-    <article>
+    <article tabIndex="0">
       <img alt={name + " dish"} src={image} className="image" />
       <div className="card-container">
         <div>

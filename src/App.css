@@ -46,15 +46,20 @@ input[type="submit"] {
   top: 0;
   z-index: 2;
   padding: 0 1rem;
-  box-shadow: 0 0.3rem 3rem rgba(0, 0, 0, 0.2);
-  width: 100%;
+  box-shadow: 0 0.3rem 3rem rgba(0, 0, 0, 0.1);
+  width: 100vw;
   height: 11vh;
   background-color: var(--white);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
+.header a {
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  border-radius: 8px;
+}
 .header h1 {
   margin: 0;
   font-weight: bold;
@@ -86,6 +91,7 @@ input[type="submit"] {
 .phone-navigation a {
   font-size: 24px;
   padding: 1rem;
+  text-align: start;
 }
 .desktop-navigation {
   display: none;
@@ -94,12 +100,7 @@ input[type="submit"] {
   display: inline-block;
   padding: 1rem;
 }
-.header a {
-  text-align: center;
-  font-weight: bold;
-  display: block;
-  border-radius: 8px;
-}
+
 .cart {
   position: relative;
   scale: 1;
@@ -134,43 +135,64 @@ input[type="submit"] {
 }
 .hero {
   background-color: var(--primary);
-  height: 100vh;
-  position: relative;
   display: flex;
-  justify-content: space-around;
-  padding: 5vh 10vw 5vh 5vw;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5vh 0vw;
   color: var(--highlight);
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 .image {
   max-width: 100%;
   max-height: 100%;
 }
 .hero div:first-child {
-  width: 50vw;
+  width: 100%;
 }
 .hero h1 {
+  margin: 0;
   color: var(--primary2);
-  font-size: 4rem;
+  font-size: 9rem;
 }
 .hero span {
+  height: 90px;
+  display: block;
   font-size: 3rem;
   color: var(--white);
 }
 .hero p {
-  margin-top: 1.5rem;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   color: var(--white);
-}
-.hero aside {
-  margin-top: 5rem;
-  width: 30vw;
-}
-aside > img {
-  border-radius: 16px;
+  width: 100vw;
 }
 .hero .button-primary {
+  margin: 2rem 0;
+}
+.hero aside {
   position: absolute;
-  bottom: 3rem;
+  width: 15rem;
+  bottom: 0rem;
+}
+.hero aside:nth-child(1) {
+  left: -10rem;
+}
+.hero aside:nth-child(2) {
+  left: 0.5rem;
+}
+.hero aside:nth-child(3) {
+  right: 0.5rem;
+}
+.hero aside:nth-child(4) {
+  right: -10rem;
+}
+aside + div {
+  z-index: 1;
 }
 .hero-image {
   animation: rotation 90s linear infinite;
@@ -186,6 +208,8 @@ aside > img {
 .specials {
   min-height: 116vh;
   padding: 2rem 1rem;
+  position: relative;
+  background-color: var(--white);
 }
 .specials h3 {
   color: var(--black);
@@ -237,6 +261,20 @@ aside > img {
   background-color: var(--highlight);
   border-top-right-radius: 16px;
   border-top-left-radius: 16px;
+}
+.specials article:focus {
+  animation: scale-out-and-z 0.5s linear forwards;
+}
+@keyframes scale-out-and-z {
+  0% {
+  }
+  50% {
+    /* transform:; */
+  }
+  100% {
+    z-index: 1;
+    transform: scale(1.2);
+  }
 }
 .specials article:hover {
   transform: scale(1.1);
@@ -378,6 +416,7 @@ aside > img {
   color: var(--black);
 }
 .footer {
+  position: relative;
   padding: 6rem 0rem;
   width: 100%;
   min-height: 23vh;
@@ -429,41 +468,81 @@ form > div {
   position: relative;
   height: 100vh;
   display: flex;
-  /* margin: 2rem 1rem 2rem 1rem; */
   background-image: url(assets/overview-photo-2.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
+  padding: 2rem;
 }
 .form-cont form {
-  margin: 3rem 0rem 0rem 1rem;
+  margin: 3rem 0.5rem 0rem 0.5rem;
   display: flex;
   flex-direction: column;
   width: 100vw;
+  gap: 1rem;
 }
 
 label {
+  position: absolute;
   display: block;
   font-size: 20px;
-  padding-top: 1rem;
+  left: 20px;
+  top: 15px;
+  pointer-events: none;
+}
+label:has(+ select),
+label:has(+ input[type="date"]) {
+  display: none;
+}
+select,
+input[type="date"] {
+  text-align: center;
+}
+label:has(+ input:focus),
+label:has(+ input:not(:placeholder-shown)),
+label:has(+ textarea:focus),
+label:has(+ textarea:not(:placeholder-shown)) {
+  top: 3%;
+  left: 20px;
+  font-size: 14px;
+  opacity: 65%;
 }
 input[type="text"],
 input[type="number"],
+input[type="email"],
 input[type="date"],
+textarea,
 select {
+  resize: none;
+  font-size: 20px;
   padding: 0.5rem;
   width: 100%;
-  height: 40px;
+  height: 55px;
   border: none;
   border-bottom: 1px solid var(--primary2);
   border-radius: 16px;
 }
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+}
+
+textarea {
+  font-size: 18px;
+  height: 200px;
+  padding: 1.5rem 1rem;
+  /* overflow: hidden; */
+}
 .form-cont input[type="submit"] {
-  margin: 2rem 0rem 2rem 0;
-  width: 90%;
+  margin-top: 1rem;
+  width: 95%;
 }
 .form-cont input[type="submit"]:hover {
   border: 1px solid transparent;
+}
+.input-container {
+  position: relative;
+  flex: 0;
 }
 .confirmed-background {
   top: 0;
@@ -562,7 +641,7 @@ select {
 .scroll-to-menu .arrow {
   position: absolute;
   animation: scroll-button 1s ease-out alternate infinite;
-  color: var(--primary);
+  color: var(--black);
 }
 .arrow:nth-child(2) {
   top: 40%;
@@ -683,6 +762,10 @@ select {
   max-width: 30rem;
   text-align: center;
 }
+.social-icons-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 .morph-circle {
   height: 350px;
   width: 350px;
@@ -693,26 +776,129 @@ select {
 .about-img {
   background-image: url(./assets/restauranfood.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
+  background-size: 120% 120%;
+  background-position: left top;
   border: 10px solid var(--primary2);
 }
 @keyframes morph {
   0% {
-    background-position: top;
+    background-position: left top;
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
   50% {
-    background-position: bottom;
+    background-position: right top;
     border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
   }
   100% {
-    background-position: top;
+    background-position: left top;
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
 }
+.form-cont .input-container {
+  flex: 1;
+}
+.contact::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.2);
+  background-image: linear-gradient(
+    to top,
+    var(--black),
+    transparent,
+    var(--black)
+  );
+}
+.contact::before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./assets/overview-photo-3.jpg);
+  background-position: 50% 0;
+  /* background-position: cover; */
+  background-size: cover;
+}
+.contact-header {
+  padding: 3rem 0rem;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-header h1 {
+  font-size: 10rem;
+}
+.contact-header p {
+  font-size: 1.1rem;
+}
+.contact-form {
+  background-image: none;
+  width: 100%;
+}
+.form-cont.contact-form {
+  background-color: hsla(0, 0%, 100%, 0.3);
+  backdrop-filter: blur(4px);
+  padding: 2rem;
+}
 
-@media screen and (min-width: 900px) {
+.details {
+  background-color: var(--white);
+  padding: 2rem 4rem;
+  margin: 2rem 0rem 10rem 0;
+}
+.details .details-container {
+  border-radius: 6px;
+  border: 3px solid var(--primary);
+  display: flex;
+  flex-direction: column;
+}
+.details-container .info {
+  padding: 2.5rem 2rem;
+}
+.details .details-container > * {
+  flex: 1;
+}
+.info h5 {
+  font-size: 2.7rem;
+  margin-bottom: 2rem;
+}
+hr {
+  margin: 1rem 0 1rem 0;
+}
+.info p {
+  font-size: 1.2rem;
+  display: inline-block;
+}
+.link {
+  font-size: 1.2rem;
+  transition: all 50ms linear;
+}
+.link i {
+  margin: 0 1rem 0 0;
+}
+.info a:hover {
+  color: #0d6efd;
+}
+.info .scoial-icon {
+  border: 3px solid #ccc;
+  border-radius: 6px;
+  font-size: 1.7rem;
+  margin: 0.3rem;
+  padding: 0.8rem;
+  color: var(--primary);
+  transition: all 50ms linear;
+}
+.info .scoial-icon:hover {
+  background-color: var(--primary2);
+  color: var(--white);
+}
+@media screen and (min-width: 923px) {
   .header {
     padding: 25px 40px 25px 50px;
   }
@@ -725,18 +911,24 @@ select {
   .desktop-navigation a:hover {
     color: var(--primary2);
   }
-  .hero {
-    height: 65vh;
+  .hero p {
+    padding: 1rem 25%;
   }
   .hero aside {
-    margin-top: 0;
-    width: 20vw;
+    width: 25rem;
+    bottom: -8rem;
   }
-  .hero p {
-    font-size: 2rem;
+  .hero aside:nth-child(1) {
+    left: 0;
   }
-  .hero div:first-child {
-    min-width: 30vw;
+  .hero aside:nth-child(2) {
+    left: 25rem;
+  }
+  .hero aside:nth-child(3) {
+    right: 25rem;
+  }
+  .hero aside:nth-child(4) {
+    right: 0;
   }
   .specials {
     padding: 10rem 22rem;
@@ -780,7 +972,6 @@ select {
     gap: 6rem;
     width: 75%;
     height: 75%;
-    padding: 2rem;
   }
   .form-cont > div:first-child {
     border-radius: 16px;
@@ -812,21 +1003,14 @@ select {
     font-family: "Markazi Text";
   }
   .form-cont form {
-    display: flex;
-    flex-direction: column;
     background-position: 0 80%;
     width: 50%;
-    gap: 1rem;
   }
-
   .input-container {
     width: 100%;
   }
   .footer-block .fa {
     margin-right: 2rem;
-  }
-  label {
-    display: none;
   }
   .cart {
     scale: 0.9;
@@ -837,20 +1021,49 @@ select {
   .menu-categories button {
     padding: 18px 34px;
   }
+  .contact-form form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .contact-form button {
+    grid-column: span 2;
+    justify-self: center;
+  }
+  .contact-form .input-container:nth-child(3),
+  .contact-form .input-container:nth-child(4) {
+    grid-column: span 2;
+  }
+  .input-container {
+    flex: 1;
+  }
+  .details .details-container {
+    flex-direction: row;
+  }
 }
 @media screen and (max-width: 527px) {
   .testimonials article:focus {
     animation: scale-out 0.5s linear forwards !important;
   }
-  @keyframes scale-out {
-    0% {
-    }
-    50% {
-      /* transform:; */
-    }
-    100% {
-      transform: scale(1.5);
-    }
+  .overview img {
+    width: 60vw;
+  }
+  .form-cont {
+    padding: 0;
+  }
+  .form-cont .input-container {
+    flex: 0;
+  }
+}
+@keyframes scale-out {
+  0% {
+  }
+  50% {
+    /* transform:; */
+  }
+  100% {
+    transform: scale(1.5);
   }
 }
 .button-primary {

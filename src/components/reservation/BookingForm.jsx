@@ -109,7 +109,7 @@ function BookingForm({
             <div className="input-container">
               <label htmlFor="first-name">First Name</label>
               <input
-                placeholder="First name"
+                placeholder=" "
                 type="text"
                 id="first-name"
                 name="firstName"
@@ -124,7 +124,7 @@ function BookingForm({
             <div className="input-container">
               <label htmlFor="last-name">Last Name</label>
               <input
-                placeholder="Last name"
+                placeholder=" "
                 type="text"
                 id="last-name"
                 name="lastName"
@@ -145,7 +145,7 @@ function BookingForm({
                 type="number"
                 id="contact-number"
                 name="contactNumber"
-                placeholder="123-456-7890"
+                placeholder=" "
                 value={formData.contactNumber.value}
                 onChange={handleFormChange}
                 onBlur={handleFormBlur}
@@ -159,7 +159,7 @@ function BookingForm({
               <label htmlFor="guests">Number of Diners</label>
               <input
                 type="number"
-                placeholder="Number of Diners"
+                placeholder=" "
                 min="1"
                 max="10"
                 id="guests"
@@ -174,7 +174,7 @@ function BookingForm({
             <div className="input-container">
               <label htmlFor="res-date">Choose date</label>
               <input
-                placeholder="Your name"
+                placeholder=" "
                 type="date"
                 id="res-date"
                 name="date"
