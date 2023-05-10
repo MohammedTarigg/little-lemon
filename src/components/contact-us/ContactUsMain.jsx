@@ -1,15 +1,6 @@
 import React from "react";
-// import GoogleMapReact from "google-map-react";
 
 function ContactUsMain() {
-  // const defaultProps = {
-  //   center: {
-  //     lat: 25.325984,
-  //     lng: 51.350201,
-  //   },
-  //   zoom: 16,
-  // };
-
   return (
     <section className="contact">
       <div className="contact-header">

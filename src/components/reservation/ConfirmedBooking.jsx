@@ -1,7 +1,6 @@
 export default function ConfirmedBooking({ confirmed, setConfirmed }) {
   let rootHeight = document.getElementById("root").clientHeight + "px",
     rootWidth = document.getElementById("root").clientWidth + "px";
-  // console.log(rootHeight);
   return (
     <article
       className={

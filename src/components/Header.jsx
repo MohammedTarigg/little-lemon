@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { MaterialUISwitch } from "./MUIswitch";
 import { useTheme } from "./ThemeContext";
-// import { ThemeProvider } from "./ThemeContext";
-// import basket from "../assets/headerNfooter/basket.png";
 
 function Header() {
   const [windowSize, setWindowSize] = useState({

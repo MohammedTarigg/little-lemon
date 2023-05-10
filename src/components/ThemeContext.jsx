@@ -4,7 +4,7 @@ const ThemeContext = createContext(null);
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-  const [url, setUrl] = useState(window.location.href);
+  const [url] = useState(window.location.href);
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
@@ -12,7 +12,6 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     if (localStorage.getItem("theme")) {
-      console.log("setted");
       setTheme((prevstate) => (prevstate = localStorage.getItem("theme")));
     }
   }, [url]);
