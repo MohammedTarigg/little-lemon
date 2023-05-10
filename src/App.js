@@ -19,8 +19,8 @@ function App() {
           <Route path="/little-lemon/menu" element={<MenuPage />} />
           <Route path="/little-lemon/about" element={<AboutPage />} />
           <Route path="/little-lemon/contact" element={<ContactUs />} />
-          <Route path="/404" element={<NoMatchPage />} />
-          <Route path="*" element={<Navigate to="/404" />} />
+          <Route path="/little-lemon/404" element={<NoMatchPage />} />
+          <Route path="*" element={<Navigate to="/little-lemon/404" />} />
         </Routes>
       </Router>
     </ThemeProvider>
