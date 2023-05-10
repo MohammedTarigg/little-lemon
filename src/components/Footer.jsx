@@ -54,10 +54,7 @@ function Footer() {
           target="_blank">
           <i className="fa fa-github" aria-hidden="true"></i>
         </a>
-        <a
-          href="https://github.com/MohammedTarigg"
-          rel="noreferrer"
-          target="_blank">
+        <a href="tel:+97455428912" rel="noreferrer" target="_blank">
           <i className="fa fa-phone" aria-hidden="true"></i>
         </a>
         <a

@@ -968,6 +968,34 @@ hr {
   background-color: var(--primary2);
   color: var(--white);
 }
+#nomatch {
+  background-image: url(./assets/404.jpg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  font-weight: bold;
+  text-align: center;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+#nomatch h2 {
+  font-size: 13rem;
+}
+#nomatch p {
+  margin: 2rem 0;
+}
+#nomatch a {
+  border: 2px solid var(--highlight);
+  border-radius: 6px;
+  padding: 8px 15px;
+  background: transparent;
+  color: inherit;
+  /* text-align: center; */
+}
 @media screen and (min-width: 923px) {
   .header {
     padding: 25px 40px 25px 50px;
