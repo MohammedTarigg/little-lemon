@@ -53,7 +53,7 @@ function Header() {
             <rect width="50" x="1" y="70" rx="5" className="bot"></rect>
           </svg>
         </div>
-        <NavLink end to="/">
+        <NavLink end to="/little-lemon">
           <h1>
             little <span>lemon</span> restaurant
           </h1>
